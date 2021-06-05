@@ -1,0 +1,28 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             comp, CODE, READONLY
+    2 00000000 E3E0000A        mvn              r0, #10
+    3 00000004                 end
+Command Line: --debug --xref --device=DARMP --apcs=interwork -o"1's comp.o" -IC
+:\Keil\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=1's comp.lst "1's com
+p.s"
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+comp 00000000
+
+Symbol: comp
+   Definitions
+      At line 1 in file 1's
+   Uses
+      None
+Comment: comp unused
+1 symbol
+321 symbols in table
