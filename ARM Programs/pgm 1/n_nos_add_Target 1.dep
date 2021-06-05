@@ -1,0 +1,2 @@
+Dependencies for Project 'n_nos_add', Target 'Target 1': (DO NOT MODIFY !)
+F (.\BL.EN.U4CSE18096.S)(0x5EE310BA)(--device DARMP --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Keil\ARM\INC\Philips" --list "BL.EN.U4CSE18096.lst" --xref -o "BL.EN.U4CSE18096.o")

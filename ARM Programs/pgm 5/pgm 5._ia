@@ -1,0 +1,1 @@
+--device DARMP --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Keil\ARM\INC\Philips" --list ".\pgm 5.lst" --xref -o ".\pgm 5.o" "..\pvtr pgm 5\pgm 5.s"

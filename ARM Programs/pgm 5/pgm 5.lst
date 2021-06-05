@@ -1,0 +1,120 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             dat, DATA, READONLY
+    2 00000000 61 72 65 
+              61 72 65 
+              61 00    string  dcb              "arearea\0"
+    3 00000008                 AREA             dat1, DATA,READWRITE
+    4 00000000         destination
+                               dcb              ""
+    5 00000000                 AREA             pgm, CODE,READONLY
+    6 00000000 E59F0024        ldr              r0, =string
+    7 00000004 E59F1024        ldr              r1, =destination
+    8 00000008 E4D02001 
+                       loop    ldrb             r2, [r0], #1
+    9 0000000C E3520061        cmp              r2, #"a"
+   10 00000010 1A000000        bne              go
+   11 00000014 E3A02075        mov              r2, #"u"
+   12 00000018 E5C12000 
+                       go      strb             r2, [r1]
+   13 0000001C E2811001        add              r1, #1
+   14 00000020 E3510000        cmp              r1, #"\0"
+   15 00000024 1AFFFFF7        bne              loop
+   16 00000028 EAFFFFFE 
+                       e       b                e
+   17 0000002C                 end
+              00000000 
+              00000000 
+Command Line: --debug --xref --device=DARMP --apcs=interwork -o".\pgm 5.o" -IC:
+\Keil\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=.\pgm 5.lst "..\pvtr p
+gm 5\pgm 5.s"
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dat 00000000
+
+Symbol: dat
+   Definitions
+      At line 1 in file ..\pvtr
+   Uses
+      None
+Comment: dat unused
+string 00000000
+
+Symbol: string
+   Definitions
+      At line 2 in file ..\pvtr
+   Uses
+      At line 6 in file ..\pvtr
+Comment: string used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dat1 00000000
+
+Symbol: dat1
+   Definitions
+      At line 3 in file ..\pvtr
+   Uses
+      None
+Comment: dat1 unused
+destination 00000000
+
+Symbol: destination
+   Definitions
+      At line 4 in file ..\pvtr
+   Uses
+      At line 7 in file ..\pvtr
+Comment: destination used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+e 00000028
+
+Symbol: e
+   Definitions
+      At line 16 in file ..\pvtr
+   Uses
+      At line 16 in file ..\pvtr
+Comment: e used once
+go 00000018
+
+Symbol: go
+   Definitions
+      At line 12 in file ..\pvtr
+   Uses
+      At line 10 in file ..\pvtr
+Comment: go used once
+loop 00000008
+
+Symbol: loop
+   Definitions
+      At line 8 in file ..\pvtr
+   Uses
+      At line 15 in file ..\pvtr
+Comment: loop used once
+pgm 00000000
+
+Symbol: pgm
+   Definitions
+      At line 5 in file ..\pvtr
+   Uses
+      None
+Comment: pgm unused
+4 symbols
+330 symbols in table
