@@ -1,0 +1,2 @@
+Dependencies for Project 'charsearch', Target 'Target 1': (DO NOT MODIFY !)
+F (.\charsearch.s)(0x5EE0AA10)(--device DARMP --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Keil\ARM\INC\Philips" --list "charsearch.lst" --xref -o "charsearch.o")
