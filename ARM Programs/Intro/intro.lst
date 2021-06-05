@@ -1,0 +1,27 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             intro, CODE, READONLY
+    2 00000000 E3A0000A        mov              r0, #10
+    3 00000004                 end
+Command Line: --debug --xref --device=DARMP --apcs=interwork -ointro.o -IC:\Kei
+l\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=intro.lst intro.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+intro 00000000
+
+Symbol: intro
+   Definitions
+      At line 1 in file intro.s
+   Uses
+      None
+Comment: intro unused
+1 symbol
+321 symbols in table
