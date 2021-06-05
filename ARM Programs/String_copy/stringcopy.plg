@@ -1,0 +1,66 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+G:\amrita_blr\Programming\ARM lab\String_copy\stringcopy.uvproj
+Project File Date:  06/09/2020
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling stringcopy.s...
+stringcopy.s(2): error: A1163E: Unknown opcode string , expecting opcode or Macro
+stringcopy.s(7): error: A1150E: Bad symbol, not defined or external
+Target not created
+Build target 'Target 1'
+assembling stringcopy.s...
+stringcopy.s(2): error: A1163E: Unknown opcode string , expecting opcode or Macro
+Target not created
+Build target 'Target 1'
+assembling stringcopy.s...
+linking...
+Program Size: Code=24 RO-data=8 RW-data=0 ZI-data=0  
+"stringcopy.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling stringcopy.s...
+stringcopy.s(14): error: A1190E: Unexpected '['
+stringcopy.s(16): error: A1108E: Multiply defined symbol 'e'
+Target not created
+Build target 'Target 1'
+assembling stringcopy.s...
+stringcopy.s(16): error: A1108E: Multiply defined symbol 'e'
+Target not created
+Build target 'Target 1'
+assembling stringcopy.s...
+linking...
+Program Size: Code=44 RO-data=8 RW-data=8 ZI-data=0  
+"stringcopy.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling stringcopy.s...
+linking...
+Program Size: Code=44 RO-data=8 RW-data=0 ZI-data=0  
+"stringcopy.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling stringcopy.s...
+linking...
+Program Size: Code=44 RO-data=8 RW-data=4 ZI-data=0  
+"stringcopy.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling stringcopy.s...
+linking...
+Program Size: Code=44 RO-data=8 RW-data=4 ZI-data=0  
+"stringcopy.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=44 RO-data=8 RW-data=4 ZI-data=0  
+"stringcopy.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling stringcopy.s...
+linking...
+Program Size: Code=44 RO-data=8 RW-data=4 ZI-data=0  
+"stringcopy.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling stringcopy.s...
+linking...
+Program Size: Code=44 RO-data=8 RW-data=4 ZI-data=0  
+"stringcopy.axf" - 0 Error(s), 0 Warning(s).

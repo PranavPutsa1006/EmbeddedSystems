@@ -1,0 +1,121 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             dat, DATA, READONLY
+    2 00000000 50 72 61 
+              6E 61 76 
+              00       src     dcb              "Pranav\0"
+    3 00000007         
+    4 00000007                 AREA             dat1, DATA, READWRITE
+    5 00000000 62 6C 61 
+              68       dest    dcb              "blah"
+    6 00000004         
+    7 00000004                 AREA             pgm,CODE,READONLY
+    8 00000000 E59F001C        ldr              r0, =src
+    9 00000004 E59F101C        ldr              r1, =dest
+   10 00000008 E4D02001 
+                       loop    ldrb             r2,[r0],#1
+   11 0000000C E3520000        cmp              r2,#"\0"
+   12 00000010 1A000000        bne              c
+   13 00000014 EA000001        b                e
+   14 00000018 E4C12001 
+                       c       strb             r2,[r1],#1
+   15 0000001C EAFFFFF9        b                loop
+   16 00000020 EAFFFFFE 
+                       e       b                e
+   17 00000024                 end
+              00000000 
+              00000000 
+Command Line: --debug --xref --device=DARMP --apcs=interwork -ostringcopy.o -IC
+:\Keil\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=stringcopy.lst string
+copy.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dat 00000000
+
+Symbol: dat
+   Definitions
+      At line 1 in file stringcopy.s
+   Uses
+      None
+Comment: dat unused
+src 00000000
+
+Symbol: src
+   Definitions
+      At line 2 in file stringcopy.s
+   Uses
+      At line 8 in file stringcopy.s
+Comment: src used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dat1 00000000
+
+Symbol: dat1
+   Definitions
+      At line 4 in file stringcopy.s
+   Uses
+      None
+Comment: dat1 unused
+dest 00000000
+
+Symbol: dest
+   Definitions
+      At line 5 in file stringcopy.s
+   Uses
+      At line 9 in file stringcopy.s
+Comment: dest used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+c 00000018
+
+Symbol: c
+   Definitions
+      At line 14 in file stringcopy.s
+   Uses
+      At line 12 in file stringcopy.s
+Comment: c used once
+e 00000020
+
+Symbol: e
+   Definitions
+      At line 16 in file stringcopy.s
+   Uses
+      At line 13 in file stringcopy.s
+      At line 16 in file stringcopy.s
+
+loop 00000008
+
+Symbol: loop
+   Definitions
+      At line 10 in file stringcopy.s
+   Uses
+      At line 15 in file stringcopy.s
+Comment: loop used once
+pgm 00000000
+
+Symbol: pgm
+   Definitions
+      At line 7 in file stringcopy.s
+   Uses
+      None
+Comment: pgm unused
+4 symbols
+330 symbols in table
