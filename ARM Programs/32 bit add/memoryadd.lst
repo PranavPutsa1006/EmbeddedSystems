@@ -1,0 +1,97 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             dat, DATA, READONLY
+    2 00000000 0000ABCD 
+                       source  DCD              0xABCD
+    3 00000004         
+    4 00000004                 AREA             dat1, DATA, READWRITE
+    5 00000000 00000000 
+                       dest    DCD              0x00
+    6 00000004         
+    7 00000004                 AREA             pgm, CODE, READONLY
+    8 00000000 E59F000C        ldr              r0, =source
+    9 00000004 E59F100C        ldr              r1, =dest
+   10 00000008 E5902000        ldr              r2, [r0]
+   11 0000000C E5812000        str              r2, [r1]
+   12 00000010 EAFFFFFE 
+                       e       b                e
+   13 00000014                 end
+              00000000 
+              00000000 
+Command Line: --debug --xref --device=DARMP --apcs=interwork -omemoryadd.o -IC:
+\Keil\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=memoryadd.lst memoryad
+d.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dat 00000000
+
+Symbol: dat
+   Definitions
+      At line 1 in file memoryadd.s
+   Uses
+      None
+Comment: dat unused
+source 00000000
+
+Symbol: source
+   Definitions
+      At line 2 in file memoryadd.s
+   Uses
+      At line 8 in file memoryadd.s
+Comment: source used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dat1 00000000
+
+Symbol: dat1
+   Definitions
+      At line 4 in file memoryadd.s
+   Uses
+      None
+Comment: dat1 unused
+dest 00000000
+
+Symbol: dest
+   Definitions
+      At line 5 in file memoryadd.s
+   Uses
+      At line 9 in file memoryadd.s
+Comment: dest used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+e 00000010
+
+Symbol: e
+   Definitions
+      At line 12 in file memoryadd.s
+   Uses
+      At line 12 in file memoryadd.s
+Comment: e used once
+pgm 00000000
+
+Symbol: pgm
+   Definitions
+      At line 7 in file memoryadd.s
+   Uses
+      None
+Comment: pgm unused
+2 symbols
+328 symbols in table

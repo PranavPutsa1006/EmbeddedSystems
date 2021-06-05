@@ -1,0 +1,18 @@
+*** Creating Trace Output File 'memoryadd.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"memoryadd.o"'
+### ADS-LD Command completed:
+--device DARMP "memoryadd.o" --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x40000000 --strict --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\memoryadd.map" -o "memoryadd.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'memoryadd.axf'
+### ADS-LD Command File: 'memoryadd.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'memoryadd.lnp', Handle=0x00000918
+### Writing '.lnp' file
+### ADS-LD Command file 'memoryadd.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

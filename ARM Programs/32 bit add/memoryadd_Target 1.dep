@@ -1,0 +1,2 @@
+Dependencies for Project 'memoryadd', Target 'Target 1': (DO NOT MODIFY !)
+F (.\memoryadd.s)(0x5EDDE232)(--device DARMP --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Keil\ARM\INC\Philips" --list "memoryadd.lst" --xref -o "memoryadd.o")
