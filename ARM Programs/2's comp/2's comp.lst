@@ -1,0 +1,30 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             comp2, CODE, READONLY
+    2 00000000 E3E0000F        mvn              r0, #15
+    3 00000004 E3A01001        mov              r1, #1
+    4 00000008 E0802001        add              r2, r0, r1
+    5 0000000C                 end
+Command Line: --debug --xref --device=DARMP --apcs=interwork -o"2's comp.o" -IC
+:\Keil\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=2's comp.lst "2's com
+p.s"
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+comp2 00000000
+
+Symbol: comp2
+   Definitions
+      At line 1 in file 2's
+   Uses
+      None
+Comment: comp2 unused
+1 symbol
+321 symbols in table
