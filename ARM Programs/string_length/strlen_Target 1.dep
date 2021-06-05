@@ -1,0 +1,2 @@
+Dependencies for Project 'strlen', Target 'Target 1': (DO NOT MODIFY !)
+F (.\strlen.s)(0x5EDF9BB1)(--device DARMP --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Keil\ARM\INC\Philips" --list "strlen.lst" --xref -o "strlen.o")

@@ -1,0 +1,124 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             dat,DATA,READONLY
+    2 00000000 59 6F 75 
+              20 68 61 
+              76 65 20 
+              66 61 69 
+              6C 65 64 
+              20 74 68 
+              69 73 20 
+              63 69 74 
+              79 00    high    dcb              "You have failed this city\0"
+    3 0000001A         
+    4 0000001A                 AREA             dat1,DATA,READWRITE
+    5 00000000 00      count   dcb              0x00
+    6 00000001         
+    7 00000001                 AREA             pgm,CODE,READONLY
+    8 00000000 E59F001C        ldr              r0, =high
+    9 00000004 E59F301C        ldr              r3, =count
+   10 00000008 E4D01001 
+                       loop    ldrb             r1,[r0],#1
+   11 0000000C E3510000        cmp              r1,#"\0"
+   12 00000010 0A000001        beq              e
+   13 00000014 E2822001        add              r2,r2,#1
+   14 00000018 EAFFFFFA        b                loop
+   15 0000001C E5C32000 
+                       e       strb             r2,[r3]
+   16 00000020 EAFFFFFE 
+                       c       b                c
+   17 00000024                 end
+              00000000 
+              00000000 
+Command Line: --debug --xref --device=DARMP --apcs=interwork -ostrlen.o -IC:\Ke
+il\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=strlen.lst strlen.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dat 00000000
+
+Symbol: dat
+   Definitions
+      At line 1 in file strlen.s
+   Uses
+      None
+Comment: dat unused
+high 00000000
+
+Symbol: high
+   Definitions
+      At line 2 in file strlen.s
+   Uses
+      At line 8 in file strlen.s
+Comment: high used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+count 00000000
+
+Symbol: count
+   Definitions
+      At line 5 in file strlen.s
+   Uses
+      At line 9 in file strlen.s
+Comment: count used once
+dat1 00000000
+
+Symbol: dat1
+   Definitions
+      At line 4 in file strlen.s
+   Uses
+      None
+Comment: dat1 unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+c 00000020
+
+Symbol: c
+   Definitions
+      At line 16 in file strlen.s
+   Uses
+      At line 16 in file strlen.s
+Comment: c used once
+e 0000001C
+
+Symbol: e
+   Definitions
+      At line 15 in file strlen.s
+   Uses
+      At line 12 in file strlen.s
+Comment: e used once
+loop 00000008
+
+Symbol: loop
+   Definitions
+      At line 10 in file strlen.s
+   Uses
+      At line 14 in file strlen.s
+Comment: loop used once
+pgm 00000000
+
+Symbol: pgm
+   Definitions
+      At line 7 in file strlen.s
+   Uses
+      None
+Comment: pgm unused
+4 symbols
+330 symbols in table
