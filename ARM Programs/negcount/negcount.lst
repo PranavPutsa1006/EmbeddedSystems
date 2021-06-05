@@ -1,0 +1,119 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             dat, DATA, READONLY
+    2 00000000 000000AB 
+              FFFFFFE9 
+              00000060 
+              FFFFFFDE data    dcd              0xAB,-23,96,-34
+    3 00000010 00000004 
+                       len     dcd              4
+    4 00000014         
+    5 00000014         
+    6 00000014                 AREA             pgm,CODE, READONLY
+    7 00000000 E59F004C        ldr              r0, =data
+    8 00000004 E59F104C        ldr              r1, =len
+    9 00000008 E3A05000        mov              r5,#0
+   10 0000000C E3A04102        mov              r4,#0x80000000
+   11 00000010 E5912000        ldr              r2, [r1]
+   12 00000014 E5903000 
+                       loop    ldr              r3, [r0]
+   13 00000018 E0033004        and              r3,r4
+   14 0000001C E2800004        add              r0,r0,#4
+   15 00000020 E2422001        sub              r2,r2,#1
+   16 00000024 E3530000        cmp              r3,#0
+   17 00000028 1A000003        bne              neg
+   18 0000002C E3520000        cmp              r2,#0
+   19 00000030 1AFFFFF7        bne              loop
+   20 00000034 E3520000        cmp              r2,#0
+   21 00000038 0A000004        beq              e
+   22 0000003C E2855001 
+                       neg     add              r5,r5,#1
+   23 00000040 E3520000        cmp              r2,#0
+   24 00000044 1AFFFFF2        bne              loop
+   25 00000048 E3520000        cmp              r2,#0
+   26 0000004C 0AFFFFFF        beq              e
+   27 00000050 EAFFFFFE 
+                       e       b                e
+   28 00000054                 end
+              00000000 
+              00000000 
+Command Line: --debug --xref --device=DARMP --apcs=interwork -onegcount.o -IC:\
+Keil\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=negcount.lst negcount.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dat 00000000
+
+Symbol: dat
+   Definitions
+      At line 1 in file negcount.s
+   Uses
+      None
+Comment: dat unused
+data 00000000
+
+Symbol: data
+   Definitions
+      At line 2 in file negcount.s
+   Uses
+      At line 7 in file negcount.s
+Comment: data used once
+len 00000010
+
+Symbol: len
+   Definitions
+      At line 3 in file negcount.s
+   Uses
+      At line 8 in file negcount.s
+Comment: len used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+e 00000050
+
+Symbol: e
+   Definitions
+      At line 27 in file negcount.s
+   Uses
+      At line 21 in file negcount.s
+      At line 26 in file negcount.s
+      At line 27 in file negcount.s
+
+loop 00000014
+
+Symbol: loop
+   Definitions
+      At line 12 in file negcount.s
+   Uses
+      At line 19 in file negcount.s
+      At line 24 in file negcount.s
+
+neg 0000003C
+
+Symbol: neg
+   Definitions
+      At line 22 in file negcount.s
+   Uses
+      At line 17 in file negcount.s
+Comment: neg used once
+pgm 00000000
+
+Symbol: pgm
+   Definitions
+      At line 6 in file negcount.s
+   Uses
+      None
+Comment: pgm unused
+4 symbols
+329 symbols in table

@@ -1,0 +1,62 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+G:\amrita_blr\Programming\ARM lab\negcount\negcount.uvproj
+Project File Date:  06/09/2020
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling negcount.s...
+negcount.s(21): error: A1516E: Bad symbol 'exit', not defined or external
+negcount.s(26): error: A1516E: Bad symbol 'exit', not defined or external
+Target not created
+Build target 'Target 1'
+assembling negcount.s...
+negcount.s(21): error: A1516E: Bad symbol 'et', not defined or external
+negcount.s(26): error: A1516E: Bad symbol 'et', not defined or external
+Target not created
+Build target 'Target 1'
+assembling negcount.s...
+negcount.s(2): error: A1179E: Bad hexadecimal number
+Target not created
+Build target 'Target 1'
+assembling negcount.s...
+linking...
+Program Size: Code=88 RO-data=20 RW-data=0 ZI-data=0  
+"negcount.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling negcount.s...
+linking...
+Program Size: Code=80 RO-data=20 RW-data=0 ZI-data=0  
+"negcount.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling negcount.s...
+negcount.s(26): error: A1516E: Bad symbol 'exit', not defined or external
+Target not created
+Build target 'Target 1'
+assembling negcount.s...
+linking...
+Program Size: Code=92 RO-data=20 RW-data=0 ZI-data=0  
+"negcount.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling negcount.s...
+linking...
+Program Size: Code=92 RO-data=20 RW-data=0 ZI-data=0  
+"negcount.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling negcount.s...
+linking...
+Program Size: Code=92 RO-data=20 RW-data=0 ZI-data=0  
+"negcount.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling negcount.s...
+linking...
+Program Size: Code=92 RO-data=20 RW-data=0 ZI-data=0  
+"negcount.axf" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling negcount.s...
+linking...
+Program Size: Code=92 RO-data=20 RW-data=0 ZI-data=0  
+"negcount.axf" - 0 Error(s), 0 Warning(s).
